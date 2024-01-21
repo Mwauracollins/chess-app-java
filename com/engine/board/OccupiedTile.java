@@ -16,9 +16,17 @@ public class OccupiedTile extends Tile{
     public Piece getPiece() {
         return this.pieceOnTile;
     }
+    public void setPiece(Piece pieceOnTile){
+        this.pieceOnTile = pieceOnTile;
+    }
 
     @Override
     public boolean isTileOccupied() {
         return true;
+    }
+
+    @Override
+    public String toString(){
+        return this.pieceOnTile.toString();
     }
 }
