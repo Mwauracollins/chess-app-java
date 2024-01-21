@@ -20,8 +20,8 @@ public class Rook extends Piece{
             {0, 1}, {1, 0},
             {0, -1}, {-1, 0}
     };
-    Rook(int row, int column, Coalition pieceCoalition) {
-        super(row, column, pieceCoalition);
+    public Rook(int row, int column, Coalition pieceCoalition, boolean isFirstMove) {
+        super(row, column, pieceCoalition, isFirstMove);
     }
 
     @Override
@@ -51,5 +51,16 @@ public class Rook extends Piece{
         }
 
         return Collections.unmodifiableList(legalRookMoves);
+    }
+
+    @Override
+    public boolean isFirstMove() {
+        return false;
+    }
+    @Override
+    public String toString(){
+        if (this.getPieceCoalition() == Coalition.WHITE){
+            return "R";
+        }return "r";
     }
 }
