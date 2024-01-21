@@ -8,7 +8,9 @@ import com.engine.piece.Piece;
  * Created by user on 01 19 2024
  **/
 public class AttackMove extends Move{
-    public AttackMove(Board board, Piece movedPiece, int row, int column, Piece attackedPiece) {
-        super();
+    private Piece attackedPiece;
+    public AttackMove(Board board, Piece movedPiece, int destinationRow, int destinationColumn, Piece attackedPiece) {
+        super(board, movedPiece, destinationRow, destinationColumn);
+        this.attackedPiece = attackedPiece;
     }
 }

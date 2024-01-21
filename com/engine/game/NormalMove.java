@@ -8,7 +8,7 @@ import com.engine.piece.Piece;
  * Created by user on 01 19 2024
  **/
 public class NormalMove extends Move{
-    public NormalMove(Board board, Piece movedPiece, int row, int column) {
-        super();
+    public NormalMove(Board board, Piece movedPiece, int destinationRow, int destinationColumn) {
+        super(board, movedPiece, destinationRow,destinationColumn);
     }
 }
