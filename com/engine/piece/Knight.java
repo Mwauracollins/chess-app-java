@@ -20,8 +20,8 @@ public class Knight extends Piece{
             {-2, 1}, {-1, 2}, {1, 2}, {2, 1},
             {-2, -1}, {-1, -2}, {1, -2}, {2, -1}
     };
-    Knight(int row, int column, Coalition pieceCoalition) {
-        super(row, column, pieceCoalition);
+    public Knight(int row, int column, Coalition pieceCoalition, boolean isFirstMove) {
+        super(row, column, pieceCoalition, isFirstMove);
     }
 
     @Override
@@ -51,5 +51,16 @@ public class Knight extends Piece{
         }
 
         return Collections.unmodifiableList(legalKnightMoves);
+    }
+
+    @Override
+    public boolean isFirstMove() {
+        return false;
+    }
+    @Override
+    public String toString(){
+        if (this.getPieceCoalition() == Coalition.WHITE){
+            return "N";
+        }return "n";
     }
 }

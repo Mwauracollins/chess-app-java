@@ -21,8 +21,8 @@ public class Queen extends Piece{
             {0, -1}, {-1, 0},
             {-1, -1}, {-1, 1}, {1, 1}, {1, -1}
     };
-    Queen(int row, int column, Coalition pieceCoalition) {
-        super(row, column, pieceCoalition);
+    public Queen(int row, int column, Coalition pieceCoalition, boolean isFirstMove) {
+        super(row, column, pieceCoalition, isFirstMove);
     }
 
     @Override
@@ -53,5 +53,16 @@ public class Queen extends Piece{
             }
         }
         return Collections.unmodifiableList(legalQueenMoves);
+    }
+
+    @Override
+    public boolean isFirstMove() {
+        return false;
+    }
+    @Override
+    public String toString(){
+        if (this.getPieceCoalition() == Coalition.WHITE){
+            return "Q";
+        }return "q";
     }
 }

@@ -20,8 +20,8 @@ public class Bishop extends Piece{
             {-1, -1}, {-1, 1}, {1, 1}, {1, -1}
     };
 
-    Bishop(int row, int column, Coalition pieceCoalition) {
-        super(row, column, pieceCoalition);
+    public Bishop(int row, int column, Coalition pieceCoalition, boolean isFirstMove) {
+        super(row, column, pieceCoalition, isFirstMove);
     }
 
     @Override
@@ -52,5 +52,16 @@ public class Bishop extends Piece{
             }
         }
         return Collections.unmodifiableList(legalBishopMoves);
+    }
+
+    @Override
+    public boolean isFirstMove() {
+        return false;
+    }
+    @Override
+    public String toString(){
+        if (this.getPieceCoalition() == Coalition.WHITE){
+            return "B";
+        }return "b";
     }
 }

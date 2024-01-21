@@ -10,11 +10,12 @@ import java.util.Collection;
  * Created by user on 01 19 2024
  **/
 public abstract class Piece {
+    boolean isFirstMove;
     private Coalition pieceCoalition;
     private int row;
     private int column;
 
-    Piece(final int row, int column, final Coalition pieceCoalition){
+    Piece(final int row, int column, final Coalition pieceCoalition, boolean isFirstMove){
         this.row = row;
         this.column = column;
         this.pieceCoalition = pieceCoalition;
@@ -33,4 +34,5 @@ public abstract class Piece {
         return (this.row * 8) + this.column;
     }
     public abstract Collection<Move> calculatePossibleMoves(Board board);
+    public abstract boolean isFirstMove();
 }
