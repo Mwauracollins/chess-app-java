@@ -26,7 +26,7 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public Collection<Move> calculatePossibleMoves(Board board) {
+    public List<Move> calculatePossibleMoves(Board board) {
         final List<Move> legalPawnMoves = new ArrayList<>();
 
         int currentRow = this.getRow();

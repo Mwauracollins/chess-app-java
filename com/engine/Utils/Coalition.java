@@ -14,6 +14,10 @@ public enum Coalition {
         public boolean isBlack() {
             return false;
         }
+        @Override
+        public String toString(){
+            return "White";
+        }
     },
     BLACK {
         @Override
@@ -24,6 +28,11 @@ public enum Coalition {
         @Override
         public boolean isBlack() {
             return true;
+        }
+
+        @Override
+        public String toString() {
+            return "Black";
         }
     },
     ;

@@ -14,9 +14,18 @@ public abstract class Tile {
         this.column = column;
     }
     public abstract Piece getPiece();
+
     public abstract boolean isTileOccupied();
     public int getTileId(){
         return (row * 8) + column;
     }
+    public abstract void setPiece(Piece pieceOnTile);
 
+    public int getRow() {
+        return this.row;
+    }
+
+    public int getColumn() {
+        return this.column;
+    }
 }

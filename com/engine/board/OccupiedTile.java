@@ -16,6 +16,7 @@ public class OccupiedTile extends Tile{
     public Piece getPiece() {
         return this.pieceOnTile;
     }
+    @Override
     public void setPiece(Piece pieceOnTile){
         this.pieceOnTile = pieceOnTile;
     }

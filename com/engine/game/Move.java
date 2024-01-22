@@ -1,6 +1,7 @@
 package com.engine.game;
 
 import com.engine.board.Board;
+import com.engine.board.Tile;
 import com.engine.piece.Piece;
 
 /**
@@ -13,7 +14,7 @@ public class Move {
     private final int destinationColumn;
     private final boolean isFirstMove;
 
-    Move(Board board, Piece movedPiece, int destinationRow, int destinationColumn){
+    public Move(Board board, Piece movedPiece, int destinationRow, int destinationColumn){
         this.board = board;
         this.movedPiece = movedPiece;
         this.destinationRow = destinationRow;
@@ -51,12 +52,24 @@ public class Move {
     public Piece getAttackedPiece(){
         return null;
     }
-    public Board executeMove(){
+
+    public static Move createMove(Board board, Tile sourceTile, Tile destinationTile){
+        Piece movedPiece = sourceTile.getPiece();
+        int destinationRow = destinationTile.getRow();
+        int destinationColumn = destinationTile.getColumn();
+
+        return new Move(board, movedPiece, destinationRow, destinationColumn);
+    }
+    public static Board executeMove(){
+
         //TODO: Logic for doing a  move
         return null;
     }
     public Board undoMove(){
         //TODO: Logic for implementing undo move
         return null;
+    }
+    public boolean isCastlingMove(){
+        return false;
     }
 }
