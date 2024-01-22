@@ -19,6 +19,12 @@ public class EmptyTile extends Tile{
     public boolean isTileOccupied() {
         return false;
     }
+
+    @Override
+    public void setPiece(Piece pieceOnTile) {
+        return;
+    }
+
     @Override
     public String toString(){
         return "-";
