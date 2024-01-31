@@ -19,6 +19,7 @@ public abstract class Piece {
         this.row = row;
         this.column = column;
         this.pieceCoalition = pieceCoalition;
+        this.isFirstMove = isFirstMove;
     }
     public Coalition getPieceCoalition(){
         return this.pieceCoalition;
@@ -35,4 +36,12 @@ public abstract class Piece {
     }
     public abstract Collection<Move> calculatePossibleMoves(Board board);
     public abstract boolean isFirstMove();
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
 }
