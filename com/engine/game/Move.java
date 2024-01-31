@@ -72,4 +72,10 @@ public class Move {
     public boolean isCastlingMove(){
         return false;
     }
+    @Override
+    public String toString() {
+        return "Move to Row: " + getDestinationRow() + ", Column: " + getDestinationColumn() +
+                (isAttackMove() ? " (Attack Move)" : " (Normal Move)");
+    }
+
 }
