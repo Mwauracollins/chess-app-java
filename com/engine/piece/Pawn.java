@@ -26,12 +26,12 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public List<Move> calculatePossibleMoves(Board board) {
+    public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> legalPawnMoves = new ArrayList<>();
 
         int currentRow = this.getRow();
         int currentColumn = this.getColumn();
-        int direction = (this.getPieceCoalition() == Coalition.WHITE) ? 1 : -1;
+        int direction = (this.getPieceCoalition() == Coalition.BLACK) ? 1 : -1;
 
         int candidateDestinationRow = currentRow + direction;
         int candidateDestinationColumn = currentColumn;
