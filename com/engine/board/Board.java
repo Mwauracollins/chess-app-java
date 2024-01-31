@@ -12,7 +12,6 @@ import com.engine.player.WhitePlayer;
 public class Board {
     public Player getCurrentPlayer;
     private Tile[][] gameBoard;
-    private Piece[][] pieces;
     private WhitePlayer whitePlayer;
     private BlackPlayer blackPlayer;
     private Player currentPlayer;

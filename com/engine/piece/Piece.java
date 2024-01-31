@@ -11,7 +11,7 @@ import java.util.Collection;
  **/
 public abstract class Piece {
     boolean isFirstMove;
-    private Coalition pieceCoalition;
+    private final Coalition pieceCoalition;
     private int row;
     private int column;
 

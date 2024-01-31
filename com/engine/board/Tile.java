@@ -6,8 +6,8 @@ import com.engine.piece.Piece;
  * Created by user on 01 19 2024
  **/
 public  class Tile {
-    private int row;
-    private int column;
+    private final int row;
+    private final int column;
     private Piece pieceOnTile;
 
     protected Tile(final int row, final int column, Piece pieceOnTile){
@@ -24,9 +24,9 @@ public  class Tile {
         return this.pieceOnTile != null;
     }
 
-    public int getTileId(){
-        return (row * 8) + column;
-    }
+//    public int getTileId(){
+//        return (row * 8) + column;
+//    }
 
     public void setPiece(Piece pieceOnTile) {
         this.pieceOnTile = pieceOnTile;
