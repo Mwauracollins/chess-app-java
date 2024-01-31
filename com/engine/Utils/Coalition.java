@@ -4,7 +4,7 @@ package com.engine.Utils;
  * Created by user on 01 19 2024
  **/
 public enum Coalition {
-    WHITE(){
+    WHITE{
         @Override
         public boolean isWhite() {
             return true;
