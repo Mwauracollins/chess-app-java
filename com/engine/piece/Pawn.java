@@ -43,8 +43,8 @@ public class Pawn extends Piece{
                 legalPawnMoves.add(new NormalMove(board, this, candidateDestinationRow, candidateDestinationColumn));
 
                 //For the pawn Jump. Track if the pawn has moved
-                candidateDestinationRow = currentRow + (direction * 2);
                 if (this.isFirstMove() && board.isValidCoordinate(candidateDestinationRow, candidateDestinationColumn)){
+                    candidateDestinationRow = currentRow + (direction * 2);
                     legalPawnMoves.add(new PawnJump(board, this, candidateDestinationRow, candidateDestinationColumn));
                 }
             }
@@ -72,7 +72,12 @@ public class Pawn extends Piece{
 
     @Override
     public boolean isFirstMove() {
-        return this.isFirstMove;
+        if (this.getPieceCoalition() == Coalition.BLACK && this.getRow() == 2){
+            return true;
+        } else if (this.getPieceCoalition() == Coalition.WHITE && this.getRow() == 6) {
+            return true;
+        }
+        return false;
     }
     @Override
     public String toString(){
