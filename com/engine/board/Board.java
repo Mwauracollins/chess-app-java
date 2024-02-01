@@ -10,7 +10,6 @@ import com.engine.player.WhitePlayer;
  * Created by user on 01 19 2024
  **/
 public class Board {
-    public Player getCurrentPlayer;
     private Tile[][] gameBoard;
     private WhitePlayer whitePlayer;
     private BlackPlayer blackPlayer;
@@ -18,7 +17,11 @@ public class Board {
 
     public Board(){
         this.gameBoard = createGameBoard();
+        this.whitePlayer = new WhitePlayer();
+        this.blackPlayer = new BlackPlayer();
+        this.currentPlayer = whitePlayer;
     }
+
 
     private Tile[][] createGameBoard() {
         gameBoard = new Tile[8][8];
@@ -44,12 +47,6 @@ public class Board {
         for (int column = 0; column < 8; column++){
             gameBoard[1][column] = new Tile(1, column, new Pawn(1, column,Coalition.BLACK, true));
             gameBoard[6][column] = new Tile(6, column, new Pawn(6, column, Coalition.WHITE, true));
-
-            if (column == 4){
-                gameBoard[6][column] = new Tile(6, column, null);
-
-            }
-
         }
         for (int row = 2; row < 6; row++){
             for (int column = 0; column < 8; column++){
@@ -93,5 +90,12 @@ public class Board {
 
     public Player getCurrentPlayer() {
         return this.currentPlayer;
+    }
+    public void playerTransition(){
+        System.out.println("Before transition:" + currentPlayer.getPlayerCoalition());
+        currentPlayer = (currentPlayer instanceof WhitePlayer) ?
+                        blackPlayer : whitePlayer;
+
+        System.out.println("Sfter:" + currentPlayer.getPlayerCoalition());
     }
 }
