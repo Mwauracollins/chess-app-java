@@ -13,7 +13,6 @@ This project is a classic chess game developed using JavaFX and AWT, managed wit
 ## Technologies Used
 - **JavaFX:** For building the user interface.
 - **AWT:** For handling the graphics.
-- **Maven:** For project management and build automation.
 
 ## Getting Started
 
@@ -24,19 +23,11 @@ This project is a classic chess game developed using JavaFX and AWT, managed wit
 ### Installation
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/chess-game-java.git
+    git clone https://github.com/Mwauracollins/chess-game-java.git
     cd chess-game-java
     ```
 
-2. **Build the project with Maven:**
-    ```bash
-    mvn clean install
-    ```
-
 3. **Run the application:**
-    ```bash
-    mvn exec:java -Dexec.mainClass="com.yourpackage.Main"
-    ```
 
 ## Usage
 - Launch the application and start a new game.
@@ -48,7 +39,4 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-For any questions or suggestions, feel free to open an issue or contact me directly at your-email@example.com.
 
